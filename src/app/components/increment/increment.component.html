@@ -1,0 +1,13 @@
+<h3>{{leyenda}}</h3>
+
+<div class="input-group mb-3">
+    <input #txtProgress type="number" min="0" max="100" class="form-control" placeholder="0" aria-label="" aria-describedby="basic-addon1" [(ngModel)]="porcentaje" (ngModelChange)="updatePorcentaje(txtProgress.value)" style="text-align: right;">
+    <div class="input-group-prepend">
+        <button class="btn btn-danger" type="button" (click)="decreasePorcentaje()">
+            <i class="fas fa-minus"></i>
+        </button>
+        <button class="btn btn-success" type="button" (click)="increasePorcentaje()">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+</div>
